@@ -1,0 +1,13 @@
+name: "ss13-changelog-generation"
+description: "Compiles changelog entries into a greater changelog file"
+branding:
+  icon: "list"
+  color: "blue"
+inputs:
+  changelogPartsDirectory:
+    description: "The directory which contains the individual changelog entry files"
+    required: true
+  changelogOutputFile:
+    description: "The output html file for the compiled changelog"
+    required: true
+runs: "python lib/ss13_genchangelog.py $CHANGELOGOUTPUTFILE $CHANGELOGPARTSDIRECTORY"
